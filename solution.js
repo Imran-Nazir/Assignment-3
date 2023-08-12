@@ -98,16 +98,19 @@ dog.fetch();
 
 //8
 class Person{
-    constructor(name, age, major){
+    constructor(name, age){
         this.name = name;
         this.age = age;
-        this.major = major;
     }
     introduce(){
         console.log(`\"Hello, my name is ${this.name} and I am ${this.age} years old.\"`);
     }
 }
 class Student extends Person{
+    constructor(name, age, major){
+        super(name, age);
+        this.major = major;
+    }
     introduce(){
         console.log(`\"Hello, my name is ${this.name} and I am ${this.age} years old. I am majoring in ${this.major}.\"`);
     }
